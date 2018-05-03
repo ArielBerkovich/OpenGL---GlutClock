@@ -81,10 +81,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Clock2D.cpp" />
+    <ClCompile Include="Displayer.cpp" />
+    <ClCompile Include="KeyboardHandler.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock2D.h" />
+    <ClInclude Include="Displayer.h" />
+    <ClInclude Include="KeyboardHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

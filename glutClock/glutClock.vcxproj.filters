@@ -13,18 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Callbacks">
+      <UniqueIdentifier>{c54cf922-aa0a-444e-8f04-fa6d23d9f270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Clock2D">
+      <UniqueIdentifier>{b5da2892-5ba9-4095-a81c-6066f86368e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Clock2D">
+      <UniqueIdentifier>{0539b815-23d6-4068-ac5e-15f3af6c8e2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Callbacks">
+      <UniqueIdentifier>{a085eb31-8f93-4dc2-9be5-5e3388928c4c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Clock2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Displayer.cpp">
+      <Filter>Source Files\Callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardHandler.cpp">
+      <Filter>Source Files\Callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock2D.cpp">
+      <Filter>Source Files\Clock2D</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock2D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Clock2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Displayer.h">
+      <Filter>Header Files\Callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardHandler.h">
+      <Filter>Header Files\Callbacks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
