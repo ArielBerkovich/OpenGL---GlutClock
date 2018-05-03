@@ -1,5 +1,18 @@
 #include "Clock2D.h"
 #include<math.h>
+#include <time.h>
+#include <stdio.h>
+
+
+
+bool initialized = false;
+struct tm * localTimeInfo;
+time_t rawtime;
+
+
+
+int localHourAtInit;
+int localMinAtInit;
 
 Color dotColor;
 Color outlineCircleColor;
@@ -14,6 +27,10 @@ float convertDegToRadiant(float deg);
 void drawCircle(float cx, float cy, float r, float num_segments);
 void getPointLocationInACircle(float VecDeg, float VecSize, Point *p);
 void drawDots();
+
+
+
+
 
 
 //-------------------------------------------
@@ -31,6 +48,9 @@ void initClock(Color dotC, Color outlineC, Color handsC)
 	{
 		getPointLocationInACircle((360 * n) / 12.0, 0.8, &points[n]);
 	}
+	localHourAtInit = getLocalHour;
+	localMinAtInit = getLocalMinute;
+	initialized = true;
 
 }
 //-------------------------------------------
@@ -150,3 +170,16 @@ void setColor(int r, int g, int b, Color* color)
 	color->b = b / 255.0f;
 }
 //-----------------------------------------------------------------
+int getLocalHour()
+{
+	time(&rawtime);
+	localTimeInfo = localtime(&rawtime);
+	return localTimeInfo->tm_hour;
+}
+//-----------------------------------------------------------------
+int getLocalMinute()
+{
+	time(&rawtime);
+	localTimeInfo = localtime(&rawtime);
+	return localTimeInfo->tm_min;
+}

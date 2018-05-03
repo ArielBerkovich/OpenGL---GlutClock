@@ -25,5 +25,6 @@ void drawClock(int hours,int minutes);
 void drawClock(int hours, int minute, float x, float y);
 void setColor(int r, int g, int b, Color* color);
 void drawTimeHands(int hour, int minute);
-
+int getLocalHour();
+int getLocalMinute();
 #endif
