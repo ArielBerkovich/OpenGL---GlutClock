@@ -39,6 +39,9 @@
     <ClCompile Include="Clock2D.cpp">
       <Filter>Source Files\Clock2D</Filter>
     </ClCompile>
+    <ClCompile Include="mouseHandler.cpp">
+      <Filter>Source Files\Callbacks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock2D.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files\Callbacks</Filter>
     </ClInclude>
     <ClInclude Include="KeyboardHandler.h">
+      <Filter>Header Files\Callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="mouseHandler.h">
       <Filter>Header Files\Callbacks</Filter>
     </ClInclude>
   </ItemGroup>

@@ -84,11 +84,13 @@
     <ClCompile Include="Displayer.cpp" />
     <ClCompile Include="KeyboardHandler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mouseHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock2D.h" />
     <ClInclude Include="Displayer.h" />
     <ClInclude Include="KeyboardHandler.h" />
+    <ClInclude Include="mouseHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

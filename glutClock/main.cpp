@@ -6,6 +6,8 @@
 #include "Clock2D.h"
 #include "Displayer.h"
 #include "KeyboardHandler.h"
+#include "mouseHandler.h"
+
 
 
 
@@ -34,7 +36,6 @@ void initializeClock()
 	setColor(0, 0, 0, &color2);
 	setColor(0, 0, 255, &color3);
 
-
 	initClock(color1, color2, color3);
 }
 //----------------------------------------------
@@ -49,7 +50,14 @@ void initGlutWindow(int argc, char *argv[])
 //----------------------------------------------
 void assignCallbacks()
 {
+	//Screen:
 	glutReshapeFunc(reshapeFuncCB);
 	glutDisplayFunc(drawingCB);
+	
+	//Keyboard:
 	glutKeyboardFunc(keyboardCB);
+
+	//Mouse:
+	glutMouseFunc(mouseClickingCB);
+	glutMotionFunc(mouseMotionCB);
 }
