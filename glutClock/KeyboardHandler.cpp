@@ -34,10 +34,10 @@ void specialFuncsCB(int key, int x, int y)
 						user_hour_movment %= 24;
 					  break;
 		case ARROW_UP:
-			            user_minute_movment--;
+			            user_minute_movment++;
 				      break;
 		case ARROW_DOWN:
-						user_minute_movment++;
+						user_minute_movment--;
 						
 				      break;
 
