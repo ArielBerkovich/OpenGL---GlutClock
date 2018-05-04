@@ -25,17 +25,20 @@ void specialFuncsCB(int key, int x, int y)
 {
 	switch (key)//Pressing the arrow keys changes the time to display
 	{
-		case ARROW_UP:
+		case ARROW_RIGHT:
 						user_hour_movment++; 
+						user_hour_movment %= 24;
 			          break;
-		case ARROW_DOWN:
-				     	user_hour_movment--;
-					  break;
 		case ARROW_LEFT:
+				     	user_hour_movment--;
+						user_hour_movment %= 24;
+					  break;
+		case ARROW_UP:
 			            user_minute_movment--;
 				      break;
-		case ARROW_RIGHT:
+		case ARROW_DOWN:
 						user_minute_movment++;
+						
 				      break;
 
 
