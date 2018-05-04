@@ -48,8 +48,8 @@ void initClock(Color dotC, Color outlineC, Color handsC)
 	{
 		getPointLocationInACircle((360 * n) / 12.0, 0.8, &points[n]);
 	}
-	localHourAtInit = getLocalHour;
-	localMinAtInit = getLocalMinute;
+	localHourAtInit = getLocalHour();
+	localMinAtInit = getLocalMinute();
 	initialized = true;
 
 }

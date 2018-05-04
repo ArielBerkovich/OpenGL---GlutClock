@@ -14,7 +14,7 @@
 
 void initializeClock();
 void initGlutWindow(int argc, char *argv[]);
-void assignCallbacks();
+void registerCallbacks();
 
 //================================================================
 int main(int argc, char *argv[])
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	initializeClock();
 	initGlutWindow(argc, argv);
-	assignCallbacks();
+	registerCallbacks();
 	glutMainLoop();
 }
 //-----------------------------------------------
@@ -48,7 +48,7 @@ void initGlutWindow(int argc, char *argv[])
 	glutCreateWindow("Clock");
 }
 //----------------------------------------------
-void assignCallbacks()
+void registerCallbacks()
 {
 	//Screen:
 	glutReshapeFunc(reshapeFuncCB);
@@ -56,6 +56,7 @@ void assignCallbacks()
 	
 	//Keyboard:
 	glutKeyboardFunc(keyboardCB);
+	glutSpecialFunc(specialFuncsCB);
 
 	//Mouse:
 	glutMouseFunc(mouseClickingCB);
