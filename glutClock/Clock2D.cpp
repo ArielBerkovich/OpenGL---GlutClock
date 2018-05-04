@@ -113,9 +113,9 @@ float convertDegToRadiant(float deg)
 //Action: draw two hand time
 void drawTimeHands(int hour, int minute)
 {
+	hour %= 24;
+	minute %= 60;
 
-	if ((hour >24) || (hour<0))return;
-	if ((minute>60) || (minute<0))return;
 	float deg1, deg2;//variables to hold the rads of the vectors of the clock
 
 	deg1 = hour % 12;
