@@ -10,7 +10,9 @@
 
 
 
-
+//menu constants
+#define MENU_SET_1200  10
+#define MENU_EXIT      20
 
 void initializeClock();
 void initGlutWindow(int argc, char *argv[]);
@@ -19,7 +21,6 @@ void registerCallbacks();
 //================================================================
 int main(int argc, char *argv[])
 {
-
 	initializeClock();
 	initGlutWindow(argc, argv);
 	registerCallbacks();
@@ -61,4 +62,10 @@ void registerCallbacks()
 	//Mouse:
 	glutMouseFunc(mouseClickingCB);
 	glutMotionFunc(mouseMotionCB);
+
+	//registering and creating menu
+	glutCreateMenu(menuCB);
+	glutAddMenuEntry("Set clock to 12:00", MENU_SET_1200);
+	glutAddMenuEntry("Exit", MENU_EXIT);
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
 }

@@ -27,11 +27,9 @@ void specialFuncsCB(int key, int x, int y)
 	{
 		case ARROW_RIGHT:
 						user_hour_movment++; 
-						user_hour_movment %= 24;
 			          break;
 		case ARROW_LEFT:
 				     	user_hour_movment--;
-						user_hour_movment %= 24;
 					  break;
 		case ARROW_UP:
 			            user_minute_movment++;

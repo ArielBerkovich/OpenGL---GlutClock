@@ -1,4 +1,5 @@
 #include "Clock2D.h"
+#include "Displayer.h"
 #include<math.h>
 #include <time.h>
 #include <stdio.h>
@@ -13,6 +14,11 @@ time_t rawtime;
 
 int localHourAtInit;
 int localMinAtInit;
+
+extern int HourTimes[4];
+extern int MinutesTimes[4];
+extern int addedHoursValues[4];
+extern int addedMinValues[4];
 
 Color dotColor;
 Color outlineCircleColor;
@@ -37,7 +43,7 @@ void drawDots();
 void initClock(Color dotC, Color outlineC, Color handsC)
 {
 	int n;//just a stupid define because C langauge sucks.
-
+	int i;
 		  //init main colors for each components:
 	dotColor = dotC;
 	outlineCircleColor = outlineC;
@@ -50,7 +56,18 @@ void initClock(Color dotC, Color outlineC, Color handsC)
 	}
 	localHourAtInit = getLocalHour();
 	localMinAtInit = getLocalMinute();
+
+	for (i = 0; i < 4; i++)
+	{
+		HourTimes[i] = localHourAtInit + addedHoursValues[i];
+		MinutesTimes[i] = localMinAtInit + addedMinValues[i];
+		if (MinutesTimes[i] >= 60) HourTimes[i] += MinutesTimes[i] / 60;
+		MinutesTimes[i] %= 60;
+		HourTimes[i] %= 24;
+	}
+
 	initialized = true;
+
 
 }
 //-------------------------------------------
